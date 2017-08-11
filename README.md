@@ -14,7 +14,7 @@ Step 2: Node Installation
 1. Change file permission: # chmod +x NodePI/node.sh
 2. Copy the file: # cp NodePI/node.sh ~/.node-red/
 3. Change directory: # cd ~/.node-red/
-4. Run the file: # sudo NodePI/./node.sh 
+4. Run the file: # sudo ./node.sh 
 
 
 

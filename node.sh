@@ -42,3 +42,20 @@ then
     echo "Não foi possível instalar o pacote ping"
     exit 1
 fi
+
+echo "Configurando Node-Red"
+
+pm2 start /usr/bin/node-red -- -v
+
+pm2 start /usr/local/bin/node-red -- -v
+
+pm2 save
+
+pm2 startup
+
+pm2 startup systemd
+
+echo "Reboot Gateway"
+
+reboot
+

@@ -33,7 +33,13 @@ then
     echo "Não foi possível instalar o pacote"
     exit 1
 fi
+echo "Instalação PM2 - PM2 é um gerenciador de processo para Node.js"
 
+if ! npm install -g pm2
+then
+    echo "Não foi possível instalar o pacote"
+    exit 1
+fi
 
 echo Instalação NodeRED...
 if ! npm install -g --unsafe-perm node-red node-red-admin
@@ -54,23 +60,12 @@ then
     exit 1
 fi
 
-echo Instalação Nodes - NodeRED...
-if ! npm install -g --unsafe-perm node-red node-red-admin
-then
-    echo "Não foi possível instalar o pacote"
-    exit 1
-fi
+
 
 echo "Instalação finalizada"
 
-echo "Configurando Node-Red"
 
-update-rc.d node-red defaults
 
-echo "Instalação PM2 - PM2 é um gerenciador de processo para Node.js"
 
-if ! npm install -g pm2
-then
-    echo "Não foi possível instalar o pacote"
-    exit 1
-fi
+
+

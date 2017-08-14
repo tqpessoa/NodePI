@@ -6,15 +6,29 @@ NodePI platform is structured in layers and based on WSO2 reference architecture
 Gateway: 
 
 Step 1: Gateway Installation
-1. In the terminal, type the command: # git clone  https://github.com/tqpessoa/NodePI.git
-2. Change file permission: # chmod +x NodePI/gw_install.sh
-3. Run the file: # sudo NodePI/./gw_install.sh 
+1. Install git: # sudo apt-get install -y git
+2. In the terminal, type the command: # git clone  https://github.com/tqpessoa/NodePI.git
+3. Change file permission: # chmod +x NodePI/gw_install.sh
+4. Run the file: # sudo NodePI/./gw_install.sh 
 
 Step 2: Node Installation
 1. Change file permission: # chmod +x NodePI/node.sh
 2. Copy the file: # cp NodePI/node.sh ~/.node-red/
 3. Change directory: # cd ~/.node-red/
-4. Run the file: # sudo ./node.sh 
+4. Run the file: # sudo ./node.sh
 
 
+Processing limitations and device heterogeneity accentuate security vulnerabilities in smart home scenarios. The proposed firewall monitors and blocks access to devices and protocols from networks that are not allowed.
 
+Firewall:
+
+Step 3: Pox Controller Installation
+1. Install git: # sudo apt-get install -y git
+2. Change directory: # cd ~
+3. In the terminal, type the command: # git clone  https://github.com/tqpessoa/NodePI.git
+4. Change file permission: # chmod +x NodePI/gw_install.sh
+5. Run the file: # sudo NodePI/./gw_install.sh 
+
+2. Copy the file: # cp NodePI/node.sh ~/.node-red/
+3. Change directory: # cd ~/.node-red/
+4. Run the file: # sudo ./node.sh

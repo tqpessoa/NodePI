@@ -23,12 +23,12 @@ Processing limitations and device heterogeneity accentuate security vulnerabilit
 Firewall:
 
 Step 3: Pox Controller Installation
-1. Install git: # sudo apt-get install -y git
+1. Repeat step 1
 2. Change directory: # cd ~
-3. In the terminal, type the command: # git clone  https://github.com/tqpessoa/NodePI.git
-4. Change file permission: # chmod +x NodePI/gw_install.sh
-5. Run the file: # sudo NodePI/./gw_install.sh 
-
-2. Copy the file: # cp NodePI/node.sh ~/.node-red/
-3. Change directory: # cd ~/.node-red/
-4. Run the file: # sudo ./node.sh
+3. Change file permission: # chmod +x NodePI/controller.sh
+4. Run the file: # sudo NodePI/./controller.sh
+5. Copy the files: # cp ~/NodePI/l2_mac.py ~/pox/ext/ #cp ~/NodePI/block_port.py ~/pox/ext/
+6. Copy device and service files: # cp ~/NodePI/port.csv ~/pox/pox/misc/ #cp ~/NodePI/firewall.csv ~/pox/pox/misc/
+7. Change file permission: # chmod  666 ~/pox/pox/misc/port.csv  # chmod  666 ~/pox/pox/misc/firewall.csv
+8. Register the devices on the platform and import the JSON code
+9. Start controller: #  ~/pox/./pox.py l2_mac openflow.discovery log.level --DEBUG samples.pretty_log host_tracker info.packet_dump block_port
